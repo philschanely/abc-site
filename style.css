@@ -1,0 +1,679 @@
+/*
+ Theme Name: ABC Custom Theme
+ Theme URI: http://philschanely.com
+ Author: Zac Bowen
+ Author URI: http://philschanely.com
+ Description: Custom theme for Richmond ABC
+ Version: 1.0.0
+ Tags: 
+ */
+
+/* colors 
+blue: #408BB7
+hyperlink blue: #3F9CB9
+red: #7E4141
+green: #678844
+hyperlink green: #82AD55
+body grey: #EDEDED
+text grey: #4A4A4A
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500|Source+Sans+Pro:400,400i');
+
+/* FOR BLOG TAB */
+    #menu-item-166 {
+        display: none;
+    }
+/* FOR BLOG TAB */
+
+html {
+    background-color: #4A4A4A;
+}
+body {
+    font-size: 62.5%;
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+    width: 100%;
+    line-height: 20px;
+    color: #4A4A4A;
+    background-color: #EDEDED;
+}
+h1 {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    width: 163px;
+}
+h2 {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 25px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.4em;
+    font-weight: 400;
+    color: #678844;
+    line-height: 36px
+}
+h3 {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #678844;
+}
+p {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 1.3em;
+    margin-bottom: 20px
+}
+ul {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    list-style-type: none;
+}
+li {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 1.3em;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #408BB7;
+}
+img {
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.col {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.solid-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ;
+}
+.border-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #408BB7;
+}
+
+
+/* HEADER AND NAV */
+
+header, footer {
+    padding: 10px;
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+    background-color: #FDFDFD;
+    background-color: #4A4A4A;
+    align-items: center;
+    justify-content: space-around;
+    height: 75px;
+}
+
+footer {
+    margin-top: 100px;
+}
+header h1, footer h1 {
+    max-width: 89px;
+    min-width: 89px;
+}
+.menu {
+width: 66%;
+}
+footer .menu ul {
+    width: 100%;
+}
+.menu, footer .menu ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .menu ul li a {
+    color: #EDEDED; 
+}
+.menu .menu-item a, footer .menu .page-item a {
+        color: #EDEDED;
+}
+.menu .menu-item a:hover, footer .menu .page-item a:hover {
+    opacity: .7;
+}
+.church-info {
+    max-width: 197px;
+    min-width: 197px;
+}
+.church-info li{
+    color: #EDEDED;
+}
+.church-info li:last-child {
+    color: #82AD55;
+}
+/* HOME PAGE */
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url(pics/IMG_6900-web-2.jpg);
+    background-size:100%;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    margin-bottom: 100px;
+}
+.welcome {
+    width: 58%;
+    text-align: center;
+    opacity: .90;
+    text-shadow: 0px 0px 3px black;
+}
+.welcome h2 {
+    color: white;
+}
+.welcome p {
+    font-size: 1.8em;
+    color: white;
+    line-height: 23px;
+}
+.home-main {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.times {
+    width: 40%; 
+    margin-right: 20px;
+}
+.times h3 {
+    margin-bottom: 20px;
+}
+.times p {
+    font-size: 1.8em;
+}
+.sermon-series {
+    width: 40%;
+}
+.sermon-pic {
+    min-width: 300px;
+}
+.times .solid-button {
+    background-color: #408BB7;
+    color: #EDEDED;
+    width: 150px;
+    height: 35px;
+    font-size: 1.3em
+}
+.sermon-series .border-button {
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: #408BB7;
+    width: 100px;
+    height: 35px;
+}
+.sermon-series .border-button:hover {
+    background-color: #408BB7;
+    color: #EDEDED;
+}
+
+
+/* ABOUT US PAGE */
+
+.about-reuben {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.reuben-pic {
+    width: 40%;
+    min-width: 300px;
+}
+.reuben-bio {
+    width: 48%;
+    min-width: 300px;
+}
+.us {
+    width: 70%;
+    margin: 0 auto;
+}
+.reuben-bio h2 {
+    margin-bottom: 0px;
+}
+.reuben-bio h3 {
+    margin-bottom: 25px;
+}
+.reuben-pic {
+    margin-right: 50px;
+}
+.expectation li {
+    list-style: disc;
+    margin-left: 40px
+}
+.statement {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.elders {
+    margin-top: 100px;
+}
+.elders h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.elders ul li {
+    font-size: 1.6em;
+}
+.elders .row {
+    justify-content: space-around;
+    text-align: center;
+}
+.doctrine .solid-button {
+    background-color: #408BB7;
+    color: white;
+    width: 100px;
+    height: 35px;
+}
+.doctrine .solid-button:hover {
+    background-color: #3F9CB9;
+}
+
+
+/* MEDIA AND MINISTRIES PAGE*/
+
+.ministries {
+    margin-top: 100px;
+}
+.ministries .row div {
+    font-size: 1em;
+}
+.ministries .row div {
+    width: 40%;
+}
+.img-wrapper {
+    margin-right: 60px;
+}
+.ladies {
+    margin: 60px 0px 60px 0px
+}
+.ministries .border-button{
+    width: 100px;
+    height: 35px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.pastor-min .border-button {
+    width: 125px;
+}
+.ministries .border-button:hover {
+    background-color: #408BB7;
+    color: #EDEDED;
+}
+
+/* CALENDAR PAGE */
+
+.calendar {
+    display: flex;
+    flex-flow: row;
+    margin: 100px 0px 0px 100px;
+} 
+.calendar h3 {
+    font-size: 1.6em;
+}
+.split {
+   margin: 25px 0px 25px 0px; 
+}
+.calendar ul ul {
+    margin-top: 10px;
+}
+.calendar ul ul li {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 1em;
+}
+.upcoming-month {
+    margin-top: 25px;
+}
+
+
+/* BLOG PAGE */
+
+.blog-post {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+/* CONTACT PAGE */
+
+.contact {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 100px;
+}
+.contact ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 500px;
+    box-sizing: border-box;
+}
+.contact ul li {
+    display: flex;
+    flex-flow: row;
+    margin: 12px 0px 12px 0px;
+}
+.contact label {
+    width: 100px;
+    text-align: right;
+    margin-right: 25px;
+}
+.contact input[type=text] {
+    width:100%;
+    height: 25px;
+    border: 2px solid #4A4A4A;
+    padding: 5px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #4A4A4A;
+    background-color: #f8f8f8;
+    resize: none;
+}
+.contact input[type=submit] {
+    width: 100px;
+    height: 35px;
+    border: 2px solid #408BB7;
+    background-color: white;
+    color: #408BB7;
+    margin-left: 100%;
+}
+.contact input[type=submit]:hover {
+    background-color: #408BB7;
+    color: #EDEDED;
+}
+
+@media screen and (max-width: 890px) {
+    
+    /* HEADER AND NAV */
+    
+    
+    /* HOME PAGE */
+    
+    .welcome {
+        min-width: 520px;
+    }
+    .intro {
+         background-size: 120%;
+        height: 400px;
+    }
+    
+    /* ABOUT US PAGE */
+    .elders .row {
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        min-width: 420px;
+        margin: 0 auto;
+    }
+    
+    /* MEDIA AND MINISTRIES PAGE*/
+    .ministries img {
+        min-width: 300px;
+    }
+    
+    /* CALENDAR PAGE */
+    
+    
+    /* CONTACT PAGE */
+}
+@media screen and (max-width: 720px) {
+    
+
+    /* HEADER AND NAV */
+    .menu {
+        width: 100%;
+        flex-flow: row wrap;
+    }
+    .church-info {
+        width: 160px;
+        height; 60px;
+        max-height: 60px;
+        min-height: 60px;
+        max-width: 190px;
+        min-width: 100px;
+    }
+    .give-button {
+        display: none;
+    }
+    footer {
+        margin-top: 50px;
+    }
+    /* HOME PAGE */
+    
+    .intro {
+        margin-bottom: 50px;
+        height: 350px;
+    }
+    .home-main {
+        flex-flow: column;
+        align-items: center;
+        min-width: 300px
+    }
+    .times {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        min-width: 300px;
+        margin-right: 0px;
+        margin: 0px auto 50px auto;
+    }
+    .sermon-series {
+        width: 100%;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+    .home-main div {
+        width: 90%;
+    }
+    .home-main .sermon-series div {
+        margin: 0 auto;
+    }
+    
+    /* ABOUT US PAGE */
+    .about-reuben {
+        width: 90%;
+        flex-flow: column;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        margin: 50px auto 50px auto;
+    }
+    .us {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+        width: 90%;
+        margin: 0px auto 50px auto;
+    }
+    .reuben-pic {
+        margin-bottom: 25px;
+        margin-right: 0px;
+    }
+    .expectation {
+    margin-right: 0px;
+    }
+    .reuben-pic, .expectation, .reuben-bio, .statement div, .doctrine {
+        width: 100%;
+    }
+    .doctrine {
+        margin: 0px auto 0px auto;
+    }
+    .doctrine .solid-button {
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    .statement {
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    /* MEDIA AND MINISTRIES PAGE*/
+    
+    .ministries {
+        margin-top: 50px;
+    }
+    
+    .ministries .row {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+    .ministries .row div {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .ministries .row div:first-child {
+        margin-bottom: 25px;
+    }
+    
+    /* CALENDAR PAGE */
+    
+    
+    /* CONTACT PAGE */
+    .contact ul {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 660px) {
+    
+    /* HEADER AND NAV */
+    
+    
+    /* HOME PAGE */
+    
+    
+    /* ABOUT US PAGE */
+    
+    
+    /* MEDIA AND MINISTRIES PAGE*/
+    
+    .img-wrapper {
+        margin-right: 0px;
+    }
+    .ladies {
+        margin: 60px 0px 60px 0px
+    }
+    /* CALENDAR PAGE */
+    
+    
+    /* CONTACT PAGE */
+    
+    .contact ul {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 540px) {
+    
+    .intro {
+        height: 350px;
+}
+    .welcome {
+        width: 90%;
+        height: 60%;
+        min-width: 300px;
+    }
+} 
+@media screen and (max-width: 467px) {
+    
+    /* HEADER AND NAV */
+    
+    
+    /* HOME PAGE */
+    
+    
+    /* ABOUT US PAGE */
+    
+    
+    /* MEDIA AND MINISTRIES PAGE*/
+    
+    /* CALENDAR PAGE */
+    
+    
+    /* CONTACT PAGE */
+    
+    .contact ul {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 400px) {
+    
+     h2 {
+        font-size: 2.4em;
+    }
+    
+    /* HEADER AND NAV */
+    
+    
+    /* HOME PAGE */
+    .welcome {
+        height: 60%;
+    }
+    
+    /* ABOUT US PAGE */
+    
+    .elders .row {
+        min-width: 300px;
+        justify-content: center;
+    }
+    /* MEDIA AND MINISTRIES PAGE*/
+    
+    
+    /* CALENDAR PAGE */
+    
+    
+    /* CONTACT PAGE */
+    
+    .contact ul {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 368px) {
+    .welcome {
+        height: 87%;
+    }
+}
+@media screen and (max-width: 344) {
+    .welcome {
+    }
+}
+@media screen and (max-width: 320px) {
+    .welcome {
+        height: 85%;
+    }
+}

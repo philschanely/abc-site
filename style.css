@@ -5,10 +5,10 @@
  Author URI: http://philschanely.com
  Description: Custom theme for Richmond ABC
  Version: 1.0.0
- Tags: 
+ Tags:
  */
 
-/* colors 
+/* colors
 blue: #408BB7
 hyperlink blue: #3F9CB9
 red: #7E4141
@@ -110,7 +110,6 @@ img {
 
 
 /* HEADER AND NAV */
-
 header, footer {
     padding: 10px;
     display: flex;
@@ -120,9 +119,7 @@ header, footer {
     background-color: #4A4A4A;
     align-items: center;
     justify-content: space-around;
-    height: 75px;
 }
-
 footer {
     margin-top: 100px;
 }
@@ -131,48 +128,66 @@ header h1, footer h1 {
     min-width: 89px;
 }
 .menu {
-width: 66%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 66%;
+}
+.menu a {
+  color: white;
+  display: block;
+  padding:5px 10px;
+}
+.menu li {
+  font-size: 1rem;
+}
+.menu li.current-menu-item a {
+  color: #ebebeb;
+  border: 2px solid #ebebeb;
 }
 footer .menu ul {
-    width: 100%;
-}
-.menu, footer .menu ul {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     font-weight: 400;
+    width: 100%;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-around;
 }
 footer .menu ul li a {
-    color: #EDEDED; 
+    color: #EDEDED;
 }
 .menu .menu-item a, footer .menu .page-item a {
-        color: #EDEDED;
+    color: #EDEDED;
 }
 .menu .menu-item a:hover, footer .menu .page-item a:hover {
     opacity: .7;
 }
 .church-info {
-    max-width: 197px;
-    min-width: 197px;
+    width: 200px;
+    margin-top:20px;
+    text-align: right;
 }
-.church-info li{
+.church-info p {
     color: #EDEDED;
 }
-.church-info li:last-child {
-    color: #82AD55;
-}
+
+
 /* HOME PAGE */
 
 .intro {
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
+    padding-top:300px;
     justify-content: center;
     background-image:url(pics/IMG_6900-web-2.jpg);
-    background-size:100%;
-    background-position: 50% 100%;
+    background-size: cover;
+    background-position: center -90px;
     background-repeat: no-repeat;
     height: 500px;
     margin-bottom: 100px;
@@ -190,6 +205,8 @@ footer .menu ul li a {
     font-size: 1.8em;
     color: white;
     line-height: 23px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .home-main {
     display: flex;
@@ -197,7 +214,7 @@ footer .menu ul li a {
     justify-content: center;
 }
 .times {
-    width: 40%; 
+    width: 40%;
     margin-right: 20px;
 }
 .times h3 {
@@ -326,18 +343,18 @@ footer .menu ul li a {
     color: #EDEDED;
 }
 
-/* CALENDAR PAGE */
 
+/* CALENDAR PAGE */
 .calendar {
     display: flex;
     flex-flow: row;
     margin: 100px 0px 0px 100px;
-} 
+}
 .calendar h3 {
     font-size: 1.6em;
 }
 .split {
-   margin: 25px 0px 25px 0px; 
+   margin: 25px 0px 25px 0px;
 }
 .calendar ul ul {
     margin-top: 10px;
@@ -353,7 +370,6 @@ footer .menu ul li a {
 
 
 /* BLOG PAGE */
-
 .blog-post {
     width: 65%;
     margin: 0 auto;
@@ -362,7 +378,6 @@ footer .menu ul li a {
 
 
 /* CONTACT PAGE */
-
 .contact {
     display: flex;
     flex-flow: row;
@@ -415,21 +430,53 @@ textarea {
     color: #EDEDED;
 }
 
+
+@media screen and (max-width: 1300px) {
+  .intro {
+    background-position: center -40px;
+  }
+}
+
+
 @media screen and (max-width: 890px) {
-    
+
     /* HEADER AND NAV */
-    
-    
+
+    header, footer {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    header h1, footer h1 {
+      order: 1;
+    }
+    .church-info {
+      order: 2;
+      flex: 1;
+    }
+    .menu {
+        width: 100%;
+        flex-flow: row wrap;
+        order: 3;
+    }
+    .menu a {
+      padding: 10px;
+    }
+    .church-info {}
+
     /* HOME PAGE */
-    
+
     .welcome {
         min-width: 520px;
     }
     .intro {
-         background-size: 120%;
         height: 400px;
+        padding-top: 200px;
     }
-    
+    .menu li {
+      margin-left: 0px;
+      font-size: 0.9rem;
+    }
+
     /* ABOUT US PAGE */
     .elders .row {
         flex-flow: row wrap;
@@ -439,44 +486,32 @@ textarea {
         min-width: 420px;
         margin: 0 auto;
     }
-    
+
     /* MEDIA AND MINISTRIES PAGE*/
     .ministries img {
         min-width: 300px;
     }
-    
+
     /* CALENDAR PAGE */
-    
-    
+
+
     /* CONTACT PAGE */
 }
 @media screen and (max-width: 720px) {
-    
+
 
     /* HEADER AND NAV */
-    .menu {
-        width: 100%;
-        flex-flow: row wrap;
-    }
-    .church-info {
-        width: 160px;
-        height; 60px;
-        max-height: 60px;
-        min-height: 60px;
-        max-width: 190px;
-        min-width: 100px;
-    }
-    .give-button {
-        display: none;
-    }
     footer {
         margin-top: 50px;
     }
     /* HOME PAGE */
-    
+
     .intro {
         margin-bottom: 50px;
         height: 350px;
+        background-position: center top;
+        align-items: center;
+        padding-top:0;
     }
     .home-main {
         flex-flow: column;
@@ -504,7 +539,7 @@ textarea {
     .home-main .sermon-series div {
         margin: 0 auto;
     }
-    
+
     /* ABOUT US PAGE */
     .about-reuben {
         width: 90%;
@@ -544,11 +579,11 @@ textarea {
         margin-bottom: 0px;
     }
     /* MEDIA AND MINISTRIES PAGE*/
-    
+
     .ministries {
         margin-top: 50px;
     }
-    
+
     .ministries .row {
         display: flex;
         justify-content: center;
@@ -561,28 +596,28 @@ textarea {
     .ministries .row div:first-child {
         margin-bottom: 25px;
     }
-    
+
     /* CALENDAR PAGE */
-    
-    
+
+
     /* CONTACT PAGE */
     .contact ul {
         width: 70%;
     }
 }
 @media screen and (max-width: 660px) {
-    
+
     /* HEADER AND NAV */
-    
-    
+
+
     /* HOME PAGE */
-    
-    
+
+
     /* ABOUT US PAGE */
-    
-    
+
+
     /* MEDIA AND MINISTRIES PAGE*/
-    
+
     .img-wrapper {
         margin-right: 0px;
     }
@@ -590,75 +625,77 @@ textarea {
         margin: 60px 0px 60px 0px
     }
     /* CALENDAR PAGE */
-    
-    
+
+
     /* CONTACT PAGE */
-    
+
     .contact ul {
         width: 75%;
     }
 }
 @media screen and (max-width: 540px) {
-    
+
     .intro {
         height: 350px;
-}
+    }
     .welcome {
         width: 90%;
         height: 60%;
         min-width: 300px;
     }
-} 
+}
 @media screen and (max-width: 467px) {
-    
+
     /* HEADER AND NAV */
-    
-    
+    .menu li {
+      font-size:0.7rem;
+    }
+
     /* HOME PAGE */
-    
-    
+
+
     /* ABOUT US PAGE */
-    
-    
+
+
     /* MEDIA AND MINISTRIES PAGE*/
-    
+
     /* CALENDAR PAGE */
-    
-    
+
+
     /* CONTACT PAGE */
-    
+
     .contact ul {
         width: 80%;
     }
 }
 @media screen and (max-width: 400px) {
-    
+
      h2 {
         font-size: 2.4em;
     }
-    
+
     /* HEADER AND NAV */
-    
-    
+
+
     /* HOME PAGE */
     .welcome {
         height: 60%;
     }
-    
+
     /* ABOUT US PAGE */
-    
+
     .elders .row {
         min-width: 300px;
         justify-content: center;
     }
     /* MEDIA AND MINISTRIES PAGE*/
-    
-    
+
+
     /* CALENDAR PAGE */
-    
-    
+
+
     /* CONTACT PAGE */
-    
+
     .contact ul {
         width: 90%;
     }

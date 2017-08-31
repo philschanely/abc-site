@@ -12,16 +12,14 @@
     <body>
        <header>
             <h1><a href="<?php bloginfo( 'url' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/pics/logo-white.png"></a></h1>
-            <?php 
-                wp_nav_menu( array( 
+            <?php
+                wp_nav_menu( array(
                     'theme_location' => 'top',
                     'container' => false
-                )); 
+                ));
             ?>
-            <ul class="church-info">
-                    <li>2900 W Main St, Richmond, IN 47374</li>
-                    <li>(765) 935-7783</li>
-                    <li class="give-button">Give Now</li>
-            </ul>
+            <div class="church-info">
+                <p><span class="address">2900 W Main St, Richmond, IN 47374</span> <span class="phone">(765) 935-7783</span></p>
+            </div>
         </header>
     <main>

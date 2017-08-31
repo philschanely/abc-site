@@ -20,12 +20,6 @@ text grey: #4A4A4A
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500|Source+Sans+Pro:400,400i');
 
-/* FOR BLOG TAB */
-    #menu-item-166 {
-        display: none;
-    }
-/* FOR BLOG TAB */
-
 html {
     background-color: #4A4A4A;
 }
@@ -85,6 +79,9 @@ a {
 img {
     width: 100%;
 }
+main {
+  padding:20px 20px;
+}
 .row {
     display: flex;
     flex-flow: row;
@@ -106,36 +103,64 @@ img {
     align-items: center;
     justify-content: center;
     border: 4px solid #408BB7;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: #408BB7;
+}
+.border-button:hover {
+  background-color: #408BB7;
+  color: #EDEDED;
 }
 
 
 /* HEADER AND NAV */
+
 header, footer {
-    padding: 10px;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
+    padding: 20px;
     background-color: #FDFDFD;
     background-color: #4A4A4A;
-    align-items: center;
-    justify-content: space-around;
+}
+nav {
+  flex: 1;
+  margin-left: 40px;
 }
 footer {
     margin-top: 100px;
 }
-header h1, footer h1 {
-    max-width: 89px;
-    min-width: 89px;
+header h1, footer h1 {}
+.church-info {
+  width: 100%;
+  text-align: right;
+}
+.church-info a {
+  color: #3F9CB9;
+}
+.church-info p {
+  color: #EDEDED;
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
 .menu {
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   font-weight: 400;
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-around;
-  width: 66%;
+  justify-content: space-between;
+}
+.menu a {
+  padding: 10px;
 }
 .menu a {
   color: white;
@@ -149,17 +174,7 @@ header h1, footer h1 {
   color: #ebebeb;
   border: 2px solid #ebebeb;
 }
-footer .menu ul {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: 400;
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-around;
-}
-footer .menu ul li a {
+/*footer .menu ul li a {
     color: #EDEDED;
 }
 .menu .menu-item a, footer .menu .page-item a {
@@ -167,15 +182,7 @@ footer .menu ul li a {
 }
 .menu .menu-item a:hover, footer .menu .page-item a:hover {
     opacity: .7;
-}
-.church-info {
-    width: 200px;
-    margin-top:20px;
-    text-align: right;
-}
-.church-info p {
-    color: #EDEDED;
-}
+}*/
 
 
 /* HOME PAGE */
@@ -235,17 +242,6 @@ footer .menu ul li a {
     width: 150px;
     height: 35px;
     font-size: 1.3em
-}
-.sermon-series .border-button {
-    font-family: 'Roboto';
-    font-weight: 500;
-    color: #408BB7;
-    width: 100px;
-    height: 35px;
-}
-.sermon-series .border-button:hover {
-    background-color: #408BB7;
-    color: #EDEDED;
 }
 
 
@@ -329,19 +325,6 @@ footer .menu ul li a {
 .ladies {
     margin: 60px 0px 60px 0px
 }
-.ministries .border-button{
-    width: 100px;
-    height: 35px;
-    font-family: 'Roboto';
-    font-weight: 500;
-}
-.pastor-min .border-button {
-    width: 125px;
-}
-.ministries .border-button:hover {
-    background-color: #408BB7;
-    color: #EDEDED;
-}
 
 
 /* CALENDAR PAGE */
@@ -375,10 +358,27 @@ footer .menu ul li a {
     margin: 0 auto;
     margin-top: 100px;
 }
-
+.blog-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.blog-short {
+  box-sizing: border-box;
+  width: 48%;
+  border: 2px solid;
+  padding: 20px;
+  font-size: 1em;
+}
+.post-date {
+  margin-top:10px;
+  font-style: italic;
+}
 
 /* CONTACT PAGE */
-.contact {
+/*.contact {
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -395,13 +395,14 @@ footer .menu ul li a {
     display: flex;
     flex-flow: row;
     margin: 12px 0px 12px 0px;
-}
-.contact label {
+}*/
+label {
     width: 100px;
     text-align: right;
     margin-right: 25px;
 }
-.contact input[type=text] {
+input[type=text],
+input[type=email] {
     width:100%;
     height: 25px;
     border: 2px solid #4A4A4A;
@@ -417,17 +418,28 @@ textarea {
     background-color: #f8f8f8;
     resize: none;
 }
-.contact input[type=submit] {
+input[type=submit],
+input[type=button] {
     width: 100px;
     height: 35px;
     border: 2px solid #408BB7;
     background-color: white;
     color: #408BB7;
     margin-left: 100%;
+    font-size: 1em;
 }
-.contact input[type=submit]:hover {
+input[type=submit]:hover {
     background-color: #408BB7;
     color: #EDEDED;
+}
+.nf-before-form-content {
+  font-size: 1rem;
+}
+.nf-field-label {
+  font-size: 1rem;
+}
+.nf-field-element {
+  font-size: 1rem;
 }
 
 
@@ -441,27 +453,6 @@ textarea {
 @media screen and (max-width: 890px) {
 
     /* HEADER AND NAV */
-
-    header, footer {
-      flex-flow: row wrap;
-      justify-content: space-between;
-    }
-    header h1, footer h1 {
-      order: 1;
-    }
-    .church-info {
-      order: 2;
-      flex: 1;
-    }
-    .menu {
-        width: 100%;
-        flex-flow: row wrap;
-        order: 3;
-    }
-    .menu a {
-      padding: 10px;
-    }
-    .church-info {}
 
     /* HOME PAGE */
 
@@ -501,6 +492,28 @@ textarea {
 
 
     /* HEADER AND NAV */
+
+    header, footer {
+      display: block;
+    }
+
+    nav { margin: 0; }
+
+    .church-info {
+      width: 200px;
+      float: right;
+      margin-top:-90px;
+    }
+
+    .menu {
+      clear:both;
+      width: 100%;
+    }
+    .menu li {
+      width: 20%;
+      text-align: center;
+    }
+
     footer {
         margin-top: 50px;
     }
@@ -598,12 +611,22 @@ textarea {
     }
 
     /* CALENDAR PAGE */
-
+    .calendar {
+      margin-top: 20px;
+      margin-left: 0;
+    }
 
     /* CONTACT PAGE */
     .contact ul {
         width: 70%;
     }
+
+    /* BLOG PAGE */
+    .blog-short {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
 }
 @media screen and (max-width: 660px) {
 
@@ -670,12 +693,20 @@ textarea {
 }
 @media screen and (max-width: 400px) {
 
-     h2 {
+    h2 {
         font-size: 2.4em;
     }
 
     /* HEADER AND NAV */
-
+    h1 { width: 140px; }
+    .church-info {
+      margin-top: -70px;
+      width: 140px;
+    }
+    .church-info p {
+      font-size: 1rem;
+    }
+    .menu a { padding: 5px; }
 
     /* HOME PAGE */
     .welcome {
